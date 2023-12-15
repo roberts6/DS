@@ -1,0 +1,77 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #252525; 
+    color: white;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    grid-column: span 10; /* Ocupa 10 columnas en el grid */
+    grid-row: span 5;     /* Ocupa 5 filas en el grid */
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+h1.cuerpo {
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: white;
+    grid-column: 3/10;  
+    flex: 1;
+    transition: margin-left 0.3s;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+.container{
+    grid-column: 2/10;
+    grid-row: 1/5;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff
+    }
+
+    a:hover {
+        color: #747bff
+    }
+
+    button {
+        background-color: #f9f9f9
+    }
+}
