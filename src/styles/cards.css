@@ -4,7 +4,7 @@
   }
 
   .MuiPaper-root{
-    margin-bottom: 1rem;
+    margin: 0.5rem;
   }
 
   .MuiCardMedia-root{
@@ -13,6 +13,56 @@
     overflow: hidden;
     background-color: #252525;
     display: block;
+  }
+
+  .tarjetaJugador{
+    grid-column: 3/9;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  .home{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 1/10;
+    grid-row: 1/5;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo{
+    text-align: center;
+    grid-column: 5;
+    grid-row: 1;
+  }
+
+.home div .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+div .card{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjetaHome{
+    text-align: center;
+}
+
+.tarjetaHome img{
+    width: 15rem;
+}
+
+  .boton{
+    background-color: white;
   }
 
   .cargarMas{

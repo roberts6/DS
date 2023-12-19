@@ -33,6 +33,7 @@ h1.cuerpo {
     grid-column: 3/10;  
     flex: 1;
     transition: margin-left 0.3s;
+    text-align: center;
 }
 
 button {
@@ -52,8 +53,16 @@ button:hover {
 }
 
 .container{
-    grid-column: 2/10;
+    grid-column: 3/10;
     grid-row: 1/5;
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 button:focus,

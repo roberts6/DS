@@ -21,7 +21,7 @@ export const NavBar = () => {
           padding: "1rem",
           margin: "1rem 0px 1rem 1rem", // Ajustado el margen izquierdo
           borderRadius: "0.65rem",
-          width: isCollapsed ? "2.8rem" : "16rem",
+          width: isCollapsed ? "2.8rem" : "12rem",
           fontWeight: "bold",
           display: "flex",
           flexDirection: "column",
@@ -132,7 +132,7 @@ export const NavBar = () => {
               Árbitro
             </li>
           </NavLink>
-          <NavLink to="/jugador">
+          <NavLink to="/jugadores">
             <li
               className="opcionMenu"
               style={{
