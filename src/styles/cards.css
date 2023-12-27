@@ -55,10 +55,41 @@ div .card{
 
 .tarjetaHome{
     text-align: center;
+    color: white;
+    width: 25rem;
+}
+
+.tarjetaHome .card{
+    margin: 1rem;
+    border: 3px solid white;
+}
+
+.card:hover{
+    background-color: chocolate;
+}
+
+.tarjetaHome h5{
+    font-size: 1.5rem;
 }
 
 .tarjetaHome img{
     width: 15rem;
+}
+
+.formularioJugador{
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.formularioJugador label{
+    margin: 0.4rem;
+}
+
+.formularioJugador input{
+    margin-left: 0.4rem;
 }
 
   .boton{

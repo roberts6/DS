@@ -8,7 +8,6 @@ import delegado from '../../assets/delegadoBlanco.svg';
 import federacion from '../../assets/federacionBlanco.svg';
 import home from '../../assets/homeBlanco.svg';
 
-
 export const NavBar = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const location = useLocation();
@@ -17,19 +16,23 @@ export const NavBar = () => {
     console.log(endPoint)
 
     const getEndPoint = (path) => {
-        return endPoint === path ? "está activo" : ""
+        return endPoint === path ? "activo" : "inactivo"
     }
+    
+    const shouldShowArbitroOption = () => {
+        return endPoint !== "/jugadores";
+      };
 
     return (
         <MagicMotion>
             <aside
                 style={{
-                    position: "fixed", // Cambiado a "fixed"
+                    position: "fixed",
                     top: 0,
                     left: isCollapsed ? "0" : "0",
                     backgroundColor: "black",
                     padding: "1rem",
-                    margin: "1rem 0px 1rem 1rem", // Ajustado el margen izquierdo
+                    margin: "1rem 0px 1rem 1rem",
                     borderRadius: "0.65rem",
                     width: isCollapsed ? "2.8rem" : "12rem",
                     fontWeight: "bold",
@@ -44,7 +47,7 @@ export const NavBar = () => {
                         display: "flex",
                         gap: "0.5rem",
                         alignItems: "center",
-                        justifyContent: isCollapsed ? "flex-start" : "space-between", // Ajustado la alineación
+                        justifyContent: isCollapsed ? "flex-start" : "space-between",
                     }}
                 >
                     {!isCollapsed && <h4 style={{ margin: 0 }}>¿Cuál es tu rol?</h4>}
@@ -104,7 +107,7 @@ export const NavBar = () => {
                         padding: 0,
                     }}
                 >
-                    <NavLink to="/">
+                    <NavLink to="/" className={getEndPoint("/")}>
                         <li
                             className="opcionMenu"
                             style={{
@@ -123,7 +126,7 @@ export const NavBar = () => {
                             Home
                         </li>
                     </NavLink>
-                    <NavLink to="/entrenador">
+                    <NavLink to="/entrenador" className={getEndPoint("/entrenador")}>
                         <li
                             className="opcionMenu"
                             style={{
@@ -142,9 +145,9 @@ export const NavBar = () => {
                             Entrenador
                         </li>
                     </NavLink>
-                    <NavLink to="/arbitro">
+                    <NavLink to="/arbitro" className={getEndPoint("/arbitro")}>
                         <li
-                            className="opcionMenu"
+                            className={`opcionMenu ${getEndPoint("/jugadores")}`}
                             style={{
                                 display: "flex",
                                 gap: "0.8rem",
@@ -161,7 +164,7 @@ export const NavBar = () => {
                             Árbitro
                         </li>
                     </NavLink>
-                    <NavLink to="/jugadores">
+                    <NavLink to="/jugadores" className={getEndPoint("/jugadores")}>
                         <li
                             className="opcionMenu"
                             style={{
@@ -180,7 +183,7 @@ export const NavBar = () => {
                             Jugador
                         </li>
                     </NavLink>
-                    <NavLink to="/delegado">
+                    <NavLink to="/delegado" className={getEndPoint("/delegado")}>
                         <li
                             className="opcionMenu"
                             style={{
@@ -199,7 +202,7 @@ export const NavBar = () => {
                             Delegado
                         </li>
                     </NavLink>
-                    <NavLink to="/federacion">
+                    <NavLink to="/federacion" className={getEndPoint("/federacion")}>
                         <li
                             className="opcionMenu"
                             style={{

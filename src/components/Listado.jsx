@@ -20,7 +20,7 @@ export const Listado = () => {
 
   const fetchListadoJugadores = async () => {
     try {
-      const response = await fetch("https://v3.football.api-sports.io/{endpoint}", requestOptions);
+      const response = await fetch("https://v3.football.api-sports.io/"{endpoint}, requestOptions);
       const data = await response.json();
       setJugadores(data);
       console.log(data);

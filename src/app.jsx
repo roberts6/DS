@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 //import { NavBarPrueba } from "./components/NavBarPrueba.jsx";
-import { NavBar } from "./components/NavBar.jsx";
+import { NavBar } from "./components/NavBars/NavBar.jsx";
 import {Entrenador} from './pages/Entrenador.jsx'
 import {Delegado} from './pages/Delegado.jsx'
 import {Jugador} from './pages/Jugador.jsx'

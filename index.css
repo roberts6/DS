@@ -57,12 +57,31 @@ button:hover {
     grid-row: 1/5;
 }
 
+.opcionCard{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.opcionCard-individual{
+    max-width: 335px;
+    min-width: 335px;
+    height: 350px;
+}
+
 .tarjetas{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.css-46bh2p-MuiCardContent-root{
+    text-align: center;
 }
 
 button:focus,

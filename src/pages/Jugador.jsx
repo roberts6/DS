@@ -1,5 +1,5 @@
 import { ListadoJugadores } from "../components/ListadoJugadores";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/NavBars/NavBar";
 
 export const Jugador = () => {
   return (
